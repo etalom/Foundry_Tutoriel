@@ -1,0 +1,17 @@
+[project]
+name = "foundry-tutoriel"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-ai-contentunderstanding>=1.2.0b3",
+    "azure-cognitiveservices-speech>=1.52.0",
+    "azure-identity>=1.26.0",
+    "dotenv>=0.9.9",
+    "langchain>=1.4.3",
+    "langchain-azure-ai>=1.2.10",
+    "langchain-openai>=1.6.7",
+    "openai>=3.24.0",
+    "python-dotenv>=1.2.4",
+]
