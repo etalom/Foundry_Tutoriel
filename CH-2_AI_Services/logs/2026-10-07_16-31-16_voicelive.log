@@ -1,0 +1,13 @@
+2026-10-07 16:31:16,925:__main__:INFO:Using Azure token credential
+2026-10-07 16:31:16,926:__main__:INFO:Connecting to VoiceLive API with model gpt-realtime
+2026-10-07 16:31:17,996:azure.identity.aio._internal.decorators:INFO:AzureCliCredential.get_token succeeded
+2026-10-07 16:31:19,371:__main__:INFO:AudioProcessor initialized with 24kHz PCM16 mono audio
+2026-10-07 16:31:19,372:__main__:INFO:Setting up voice conversation session...
+2026-10-07 16:31:19,386:__main__:INFO:Session configuration sent
+2026-10-07 16:31:19,478:__main__:INFO:Audio playback system ready
+2026-10-07 16:31:19,478:__main__:INFO:Voice assistant ready! Start speaking...
+2026-10-07 16:31:19,480:__main__:ERROR:❌ VoiceLive error: Model gpt-realtime is not supported in this region.
+2026-10-07 16:31:19,481:__main__:INFO:Stopped audio capture
+2026-10-07 16:31:19,526:__main__:INFO:End of playback queue.
+2026-10-07 16:31:19,530:__main__:INFO:Stopped audio playback
+2026-10-07 16:31:19,531:__main__:INFO:Audio processor cleaned up

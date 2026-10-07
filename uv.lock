@@ -179,6 +179,15 @@ wheels = [
 ]
 
 [[package]]
+name = "az"
+version = "0.1.0.dev1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/23/6a/c44971ddb28f5df4d36dc61669a4f6aa0731a9e379246e9c2f28ee812e1e/az-0.1.0.dev1.tar.gz", hash = "sha256:9a1e467c479010fdfc37e7527bf56e7872b81f1178850d886151b9e2af772684", size = 1219, upload-time = "2018-09-25T06:30:25.073Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f6/6c/0e5f70c96c600449d11f5d3e917323fda3fbd027154aa323b02b2e559204/az-0.1.0.dev1-py3-none-any.whl", hash = "sha256:8c261e3bd0cde67fe60b9a13520d0e7014fcda9bd2aca90372feea8b815560c4", size = 1472, upload-time = "2018-09-25T06:30:27.986Z" },
+]
+
+[[package]]
 name = "azure-ai-contentsafety"
 version = "1.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -220,6 +229,25 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e6/6b/634eb4403c60bbef36612a3dd9da3cd42ccc2b4fe64b7180fab8e965d832/azure_ai_projects-2.7.0.tar.gz", hash = "sha256:ba3c6626bfa710031de37f927ae488ca9614168382407d7b2bb8d6e20fe32ff8", size = 39992282, upload-time = "2026-09-18T20:50:49.486Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/14/62/6031657cb26334542584302006f79c2e25689a6f3736e74002071b1163b0/azure_ai_projects-2.7.0-py3-none-any.whl", hash = "sha256:4bce987ebc93641311f7f9406b94f75f00d96b7d388056bb8b06e1f6f64deeaf", size = 517253, upload-time = "2026-09-18T20:50:52.529Z" },
+]
+
+[[package]]
+name = "azure-ai-voicelive"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "azure-core" },
+    { name = "isodate" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4c/41/f5ba6c453c4602afb4ed4d6d835fac13e2c5029b72f546e8ccaa899ed540/azure_ai_voicelive-1.3.0.tar.gz", hash = "sha256:93183a534763c35eed50b23b5c5caf170e3fac88a7132698371245b775adcc72", size = 265319, upload-time = "2026-08-03T21:00:58.814Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2a/e2/bf2c30ebeb09a44613d28d76d12056df9a62e92d72ed08a0653976e7f5a2/azure_ai_voicelive-1.3.0-py3-none-any.whl", hash = "sha256:afc1ae488dd06b04cb000410129769d89c1f028c412c06536ff6a3f472e2258c", size = 160363, upload-time = "2026-08-03T21:01:00.292Z" },
+]
+
+[package.optional-dependencies]
+aiohttp = [
+    { name = "aiohttp" },
 ]
 
 [[package]]
@@ -618,7 +646,9 @@ name = "foundry-tutoriel"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "az" },
     { name = "azure-ai-contentunderstanding" },
+    { name = "azure-ai-voicelive", extra = ["aiohttp"] },
     { name = "azure-cognitiveservices-speech" },
     { name = "azure-identity" },
     { name = "dotenv" },
@@ -626,12 +656,15 @@ dependencies = [
     { name = "langchain-azure-ai" },
     { name = "langchain-openai" },
     { name = "openai" },
+    { name = "pyaudio" },
     { name = "python-dotenv" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "az", specifier = ">=0.1.0.dev1" },
     { name = "azure-ai-contentunderstanding", specifier = ">=1.2.0b3" },
+    { name = "azure-ai-voicelive", extras = ["aiohttp"], specifier = ">=1.3.0" },
     { name = "azure-cognitiveservices-speech", specifier = ">=1.52.0" },
     { name = "azure-identity", specifier = ">=1.26.0" },
     { name = "dotenv", specifier = ">=0.9.9" },
@@ -639,6 +672,7 @@ requires-dist = [
     { name = "langchain-azure-ai", specifier = ">=1.2.10" },
     { name = "langchain-openai", specifier = ">=1.6.7" },
     { name = "openai", specifier = ">=3.24.0" },
+    { name = "pyaudio", specifier = ">=0.2.14" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
 ]
 
@@ -1589,6 +1623,18 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d4/ef/8bae0a316d406644450522f2f3d44a4e19632f5f3bb60d1d0e6c53842616/propcache-0.5.4-cp315-cp315t-win_amd64.whl", hash = "sha256:02c0a34f16889cf800f10f0247a564d8ce6eeab6ffcd7c87198f769067eb8432", size = 48574, upload-time = "2026-09-16T00:17:10.077Z" },
     { url = "https://files.pythonhosted.org/packages/57/be/bcc053f66a97355683884b448198e79580fae8e8fa4d96b9bb01614e9913/propcache-0.5.4-cp315-cp315t-win_arm64.whl", hash = "sha256:dc4242ca653c9b30ab51c5f8193323e7bc0928f897ee9103201e59a43abcb72e", size = 45625, upload-time = "2026-09-16T00:17:11.377Z" },
     { url = "https://files.pythonhosted.org/packages/f5/cd/785c64ed382f3f04201870267b02783f63b4678c2acfddc177a3ebcc2727/propcache-0.5.4-py3-none-any.whl", hash = "sha256:62c60aec739ed00124573cce1178138fd690c7676352d67a37328c1cf51d7468", size = 16338, upload-time = "2026-09-16T00:17:13.106Z" },
+]
+
+[[package]]
+name = "pyaudio"
+version = "0.2.14"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/26/1d/8878c7752febb0f6716a7e1a52cb92ac98871c5aa522cba181878091607c/PyAudio-0.2.14.tar.gz", hash = "sha256:78dfff3879b4994d1f4fc6485646a57755c6ee3c19647a491f790a0895bd2f87", size = 47066, upload-time = "2023-11-07T07:11:48.806Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8d/45/8d2b76e8f6db783f9326c1305f3f816d4a12c8eda5edc6a2e1d03c097c3b/PyAudio-0.2.14-cp312-cp312-win32.whl", hash = "sha256:5fce4bcdd2e0e8c063d835dbe2860dac46437506af509353c7f8114d4bacbd5b", size = 144750, upload-time = "2023-11-07T07:11:40.142Z" },
+    { url = "https://files.pythonhosted.org/packages/b0/6a/d25812e5f79f06285767ec607b39149d02aa3b31d50c2269768f48768930/PyAudio-0.2.14-cp312-cp312-win_amd64.whl", hash = "sha256:12f2f1ba04e06ff95d80700a78967897a489c05e093e3bffa05a84ed9c0a7fa3", size = 164126, upload-time = "2023-11-07T07:11:41.539Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/77/66cd37111a87c1589b63524f3d3c848011d21ca97828422c7fde7665ff0d/PyAudio-0.2.14-cp313-cp313-win32.whl", hash = "sha256:95328285b4dab57ea8c52a4a996cb52be6d629353315be5bfda403d15932a497", size = 150982, upload-time = "2024-11-20T19:12:12.404Z" },
+    { url = "https://files.pythonhosted.org/packages/a5/8b/7f9a061c1cc2b230f9ac02a6003fcd14c85ce1828013aecbaf45aa988d20/PyAudio-0.2.14-cp313-cp313-win_amd64.whl", hash = "sha256:692d8c1446f52ed2662120bcd9ddcb5aa2b71f38bda31e58b19fb4672fffba69", size = 173655, upload-time = "2024-11-20T19:12:13.616Z" },
 ]
 
 [[package]]

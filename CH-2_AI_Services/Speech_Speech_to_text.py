@@ -14,6 +14,7 @@ key= os.environ.get("API_KEY","")
 # Set up the speech config using resource endpoint
 endpoint_url = os.environ.get("AZURE_SPEECH_ENDPOINT", "https://foundryegws.cognitiveservices.azure.com/")
 speech_key = os.environ.get("AZURE_SPEECH_KEY", key
+                            
                             )
 
 speech_config = speechsdk.SpeechConfig(

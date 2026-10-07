@@ -1,0 +1,3 @@
+2026-10-07 16:28:09,675:__main__:INFO:Using Azure token credential
+2026-10-07 16:28:09,676:__main__:INFO:Connecting to VoiceLive API with model gpt-realtime
+2026-10-07 16:28:10,972:azure.identity.aio._internal.decorators:INFO:AzureCliCredential.get_token succeeded
